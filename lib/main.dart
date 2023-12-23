@@ -14,20 +14,25 @@ class Responsive extends StatelessWidget {
         appBar: AppBar(),
         body: Column(
           children: [
-            const Icon(
-              Icons.ac_unit,
-              size: 300,
+            // ignore: prefer_const_constructors
+            Flexible(
+              child: const FittedBox(
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 300,
+                ),
+              ),
             ),
             Container(
               color: Colors.black12,
             ),
-            Container(
-              height: 150,
-              color: Colors.green,
-            ),
-            Container(
-              height: 150,
-              color: Colors.yellow,
+            Expanded(
+              child: Container(
+                height: 150,
+                color: Colors.green,
+                child: const FittedBox(
+                    fit: BoxFit.scaleDown, child: Icon(Icons.abc)),
+              ),
             ),
           ],
         ),

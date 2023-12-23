@@ -32,17 +32,7 @@ class Expanded extends StatelessWidget {
             // ),
           ],
         ),
-  
-
-        // This code for topic layoutBuilder
-        // body: LayoutBuilder(builder: (context, constrains) {
-        //   log(constrains.maxWidth.toString());
-        //   if (constrains.maxWidth <= 500) {
-        //     return const MobileLayout();
-        //   } else {
-        //     return const DesktopLayout();
-        //   }
-        // }),
+       
       ),
     );
   }
