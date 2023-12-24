@@ -1,42 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:responsive/AspectRationExample.dart';
+import 'package:responsive/Intrinsic_widgets.dart';
 
 void main() {
   runApp(const Responsive());
 }
 
-class Responsive extends StatelessWidget {
+class Responsive extends StatefulWidget {
   const Responsive({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(),
-        body: Column(
-          children: [
-            // ignore: prefer_const_constructors
-            Flexible(
-              child: const FittedBox(
-                child: Icon(
-                  Icons.ac_unit,
-                  size: 300,
-                ),
-              ),
-            ),
-            Container(
-              color: Colors.black12,
-            ),
-            Expanded(
-              child: Container(
-                height: 150,
-                color: Colors.green,
-                child: const FittedBox(
-                    fit: BoxFit.scaleDown, child: Icon(Icons.abc)),
-              ),
-            ),
-          ],
-        ),
+  State<Responsive> createState() => _ResponsiveState();
+}
 
+class _ResponsiveState extends State<Responsive> {
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: IntrinsicWidgets(),
         // This code for topic layoutBuilder
         // body: LayoutBuilder(builder: (context, constrains) {
         //   log(constrains.maxWidth.toString());
