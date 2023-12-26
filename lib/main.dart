@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive/AspectRationExample.dart';
-import 'package:responsive/Intrinsic_widgets.dart';
+import 'package:responsive/responsive_text_example.dart';
 
 void main() {
   runApp(const Responsive());
@@ -19,7 +18,7 @@ class _ResponsiveState extends State<Responsive> {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: IntrinsicWidgets(),
+        body: ResponsiveText(),
         // This code for topic layoutBuilder
         // body: LayoutBuilder(builder: (context, constrains) {
         //   log(constrains.maxWidth.toString());
